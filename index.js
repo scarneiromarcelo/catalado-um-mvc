@@ -24,33 +24,32 @@ const motos = [
   {
     id: 1,
     nome: "Daytona 675 2014",
-    descricao:
-      "Super moto para um super piloto",
+    descricao: "Super moto para um super piloto",
     tipo: "50.000",
-    
-    imagem: "https://autos.culturamix.com/blog/wp-content/gallery/motos-2/moto-2.jpg",
+
+    imagem:
+      "https://autos.culturamix.com/blog/wp-content/gallery/motos-2/moto-2.jpg",
   },
 
   {
     id: 2,
     nome: "Rockt 3R 2020",
-    descricao:
-      "A primeira 2500cc do mundo!",
+    descricao: "A primeira 2500cc do mundo!",
     tipo: "80.000",
-     
-    imagem: "https://i0.wp.com/motoadventure.com.br/wp-content/uploads/2020/10/Triumph-motorcycles-rocket-3-r-III-lancamento-2021-renovacao-6.jpg?ssl=1",
+
+    imagem:
+      "https://i0.wp.com/motoadventure.com.br/wp-content/uploads/2020/10/Triumph-motorcycles-rocket-3-r-III-lancamento-2021-renovacao-6.jpg?ssl=1",
   },
 
   {
     id: 3,
     nome: "Fan 125 2014",
-    descricao:
-      "Para usar no dia a dia",
+    descricao: "Para usar no dia a dia",
     tipo: "20.000",
-       
-    imagem: "https://quatrorodas.abril.com.br/wp-content/uploads/2019/02/screen-shot-2019-02-01-at-12.45.00-pm.png?w=1024&resize=1200,800",
+
+    imagem:
+      "https://quatrorodas.abril.com.br/wp-content/uploads/2019/02/screen-shot-2019-02-01-at-12.45.00-pm.png?w=1024&resize=1200,800",
   },
-  
 ];
 
 let moto = undefined;

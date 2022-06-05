@@ -1,5 +1,5 @@
 {
-  "name": "pokedex-mvc",
+  "name": "catalogo-mvc",
   "version": "1.0.0",
   "description": "Projeto MVC de um catalogo",
   "main": "index.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/scarneiromarcelo/pokedex-mvc.git"
+    "url": "git+https://github.com/scarneiromarcelo/catalado-um-mvc .git"
   },
   "author": "Marcelo Carneiro",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/scarneiromarcelo/pokedex-mvc/issues"
+    "url": "https://github.com/scarneiromarcelo/catalado-um-mvc /issues"
   },
-  "homepage": "https://github.com/scarneiromarcelo/pokedex-mvc#readme",
+  "homepage": "https://github.com/scarneiromarcelo/catalado-um-mvc #readme",
   "dependencies": {
     "dotenv": "^16.0.1",
     "ejs": "^3.1.8",

@@ -68,7 +68,7 @@ section#cadastro h2 {
   text-align: center;
   font-weight: 700;
   font-size: 5rem;
- 
+
   color: var(--black);
 }
 section#cards {
@@ -156,7 +156,7 @@ section#cadastro {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  
+
   /* padding: 4rem; */
   width: 100%;
 }
@@ -226,7 +226,6 @@ section#cadastro form button {
 section#cadastro form button:hover {
   background-color: #fff;
   color: var(--black);
- 
 }
 
 footer {
@@ -244,7 +243,6 @@ footer p {
   color: var(--white);
   text-align: center;
   font-size: 1rem;
-  
 }
 
 @media (max-width: 480px) {
@@ -360,7 +358,7 @@ footer p {
     background-color: white;
     margin-bottom: 2rem;
   }
-  
+
   section#cards div.card {
     margin: 0.5rem 0 0.5rem 0;
     width: 50%;

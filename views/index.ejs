@@ -28,8 +28,6 @@
     <% } %>
 
     <main>
-
-      
       <section id="cadastro">
         <% if (moto == undefined) { %>
         <h2>Anuncie</h2>
@@ -122,7 +120,7 @@
             autocomplete="off"
             placeholder="Insira o link da imagem"
             value="<%= moto.imagem%>"
-          />         
+          />
 
           <button id="btnAtualizar" type="submit">Atualizar</button>
         </form>
@@ -139,7 +137,7 @@
           <img src="<%= moto.imagem %>" alt="" />
           <h3><%= moto.nome %></h3>
           <p class="descricao"><%= moto.descricao %></p>
-          
+
           <p>Preço R$: <%= moto.tipo %></p>
           <a id="editar" href="/detalhes/<%= moto.id %>">Editar</a>
           <a id="apagar" href="/delete/<%= moto.id %>">Apagar</a>
