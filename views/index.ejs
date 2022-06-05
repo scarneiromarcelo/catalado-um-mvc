@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <!--Referênciando o meu arquivo-->
+    <title>Catalogo | Motos</title>
+  </head>
+
+  <body>
+    <nav>
+      <ul>
+        <li>
+          <a href="/"><h1>VendMotos</h1></a>
+        </li>
+        <li><a href="#cadastro">Anunciar</a></li>
+        <li><a href="#cards">Classificados</a></li>
+      </ul>
+    </nav>
+
+    <% if(message != ""){ %>
+    <section id="message">
+      <p><%=message%></p>
+      <span id="close">&times;</span>
+    </section>
+    <% } %>
+
+    <main>
+
+      
+      <section id="cadastro">
+        <% if (moto == undefined) { %>
+        <h2>Anuncie</h2>
+        <form action="/create" method="post">
+          <label for="nome" class="label">Modelo e Ano da motocicleta:</label>
+          <input
+            type="text"
+            id="nome"
+            name="nome"
+            class="text-input"
+            autocomplete="off"
+            placeholder="Digite o modelo/ano da motocicleta"
+          />
+
+          <label for="descricao">Descrição:</label>
+          <input
+            type="text"
+            id="descricao"
+            name="descricao"
+            class="text-input"
+            autocomplete="off"
+            placeholder="Insira a descrição"
+          />
+
+          <label for="tipo" class="label">Preço R$:</label>
+          <input
+            type="text"
+            id="tipo"
+            name="tipo"
+            class="text-input"
+            autocomplete="off"
+            placeholder="Digite o ano da motocicleta"
+          />
+
+          <label for="imagem" class="label">Link da Imagem</label>
+          <input
+            type="text"
+            id="imagem"
+            name="imagem"
+            class="text-input"
+            autocomplete="off"
+            placeholder="Insira o link da imagem"
+          />
+
+          <button id="btnCadastrar" type="submit">Anunciar</button>
+        </form>
+        <% } else { %>
+        <h2>Atualizar Anuncio</h2>
+
+        <form action="/update/<%= moto.id %>" method="post">
+          <label for="nome" class="label">Modelo:</label>
+          <input
+            type="text"
+            id="nome"
+            name="nome"
+            class="text-input"
+            autocomplete="off"
+            placeholder="Digite o modelo da motocicleta"
+            value="<%= moto.nome%>"
+          />
+
+          <label for="descricao">Descrição:</label>
+          <input
+            type="text"
+            id="descricao"
+            name="descricao"
+            class="text-input"
+            autocomplete="off"
+            placeholder="Insira a descrição"
+            value="<%= moto.descricao%>"
+          />
+
+          <label for="tipo" class="label">Ano:</label>
+          <input
+            type="text"
+            id="tipo"
+            name="tipo"
+            class="text-input"
+            autocomplete="off"
+            placeholder="Digite o ano da motocicleta"
+            value="<%= moto.nome%>"
+          />
+
+          <label for="imagem" class="label">Link da Imagem:</label>
+          <input
+            type="text"
+            id="imagem"
+            name="imagem"
+            class="text-input"
+            autocomplete="off"
+            placeholder="Insira o link da imagem"
+            value="<%= moto.imagem%>"
+          />         
+
+          <button id="btnAtualizar" type="submit">Atualizar</button>
+        </form>
+        <% } %>
+      </section>
+
+      <section id="cards">
+        <h2>Classificados</h2>
+
+        <% motos.forEach((moto) => { %>
+        <!--Rodando um forEach para criação de várias "divs" vários cards com nome, descrição e preço da motocicleta-->
+
+        <div class="card">
+          <img src="<%= moto.imagem %>" alt="" />
+          <h3><%= moto.nome %></h3>
+          <p class="descricao"><%= moto.descricao %></p>
+          
+          <p>Preço R$: <%= moto.tipo %></p>
+          <a id="editar" href="/detalhes/<%= moto.id %>">Editar</a>
+          <a id="apagar" href="/delete/<%= moto.id %>">Apagar</a>
+        </div>
+        <% }) %>
+      </section>
+    </main>
+
+    <footer>
+      <p>Todos os direitos reservados &copy;</p>
+    </footer>
+
+    <script src="/js/script.js"></script>
+  </body>
+</html>
